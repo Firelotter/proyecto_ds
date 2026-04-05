@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>EV09 Documento</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 960px; margin: 24px auto; line-height: 1.5; color: #111; }
+h1,h2,h3 { color: #0b3d91; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { border: 1px solid #999; padding: 6px; vertical-align: top; }
+th { background: #f2f5fb; }
+</style>
+</head>
+<body>
+<h1>EV09 - Clasificacion de Variables y Seleccion de Graficas</h1>
+<p><strong>Evidencia:</strong> GA1-240201064-04-AA1-EV09<br />
+<strong>Programa:</strong> ADSO<br />
+<strong>Fecha:</strong> 2026-04-05</p>
+<h2>1. Tabla de clasificacion de variables (dataset del proyecto)</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Tipo</th>
+<th>Subtipo</th>
+<th>Justificacion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rank</td>
+<td>Cualitativa</td>
+<td>Ordinal</td>
+<td>Representa orden de posicion (ranking), no magnitud de distancia.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Cualitativa</td>
+<td>Nominal</td>
+<td>Etiqueta de texto sin orden natural.</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Cualitativa</td>
+<td>Nominal</td>
+<td>Categoria de consola/plataforma sin jerarquia.</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>Cuantitativa</td>
+<td>Discreta</td>
+<td>Valores enteros de tiempo (anos).</td>
+</tr>
+<tr>
+<td>Genre</td>
+<td>Cualitativa</td>
+<td>Nominal</td>
+<td>Categoria de genero sin orden.</td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td>Cualitativa</td>
+<td>Nominal</td>
+<td>Nombre de empresa, categoria sin orden.</td>
+</tr>
+<tr>
+<td>NA_Sales</td>
+<td>Cuantitativa</td>
+<td>Continua</td>
+<td>Medida numerica con decimales en millones.</td>
+</tr>
+<tr>
+<td>EU_Sales</td>
+<td>Cuantitativa</td>
+<td>Continua</td>
+<td>Medida numerica con decimales en millones.</td>
+</tr>
+<tr>
+<td>JP_Sales</td>
+<td>Cuantitativa</td>
+<td>Continua</td>
+<td>Medida numerica con decimales en millones.</td>
+</tr>
+<tr>
+<td>Other_Sales</td>
+<td>Cuantitativa</td>
+<td>Continua</td>
+<td>Medida numerica con decimales en millones.</td>
+</tr>
+<tr>
+<td>Global_Sales</td>
+<td>Cuantitativa</td>
+<td>Continua</td>
+<td>Variable de medicion agregada en escala continua.</td>
+</tr>
+</tbody>
+</table>
+<h2>2. Tabla de seleccion de graficas</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Tipo/Subtipo</th>
+<th>Grafica recomendada</th>
+<th>Por que usarla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rank</td>
+<td>Cualitativa ordinal</td>
+<td>Histograma por rangos de ranking</td>
+<td>Permite ver concentracion de juegos por tramos de posicion.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Cualitativa nominal</td>
+<td>Barras (Top N por frecuencia)</td>
+<td>Solo en resumenes; nombres individuales son demasiados para grafica completa.</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Cualitativa nominal</td>
+<td>Barras</td>
+<td>Comparacion directa de frecuencia o ventas por plataforma.</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>Cuantitativa discreta</td>
+<td>Linea (conteo/ventas por ano)</td>
+<td>Muestra tendencia temporal.</td>
+</tr>
+<tr>
+<td>Genre</td>
+<td>Cualitativa nominal</td>
+<td>Barras</td>
+<td>Facilita comparar categorias de genero.</td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td>Cualitativa nominal</td>
+<td>Barras (Top N)</td>
+<td>Hay muchas categorias, conviene resumir por principales.</td>
+</tr>
+<tr>
+<td>NA_Sales</td>
+<td>Cuantitativa continua</td>
+<td>Histograma y boxplot</td>
+<td>Muestran distribucion, dispersion y atipicos.</td>
+</tr>
+<tr>
+<td>EU_Sales</td>
+<td>Cuantitativa continua</td>
+<td>Histograma y boxplot</td>
+<td>Muestran distribucion, dispersion y atipicos.</td>
+</tr>
+<tr>
+<td>JP_Sales</td>
+<td>Cuantitativa continua</td>
+<td>Histograma y boxplot</td>
+<td>Muestran distribucion, dispersion y atipicos.</td>
+</tr>
+<tr>
+<td>Other_Sales</td>
+<td>Cuantitativa continua</td>
+<td>Histograma y boxplot</td>
+<td>Muestran distribucion, dispersion y atipicos.</td>
+</tr>
+<tr>
+<td>Global_Sales</td>
+<td>Cuantitativa continua</td>
+<td>Histograma y boxplot</td>
+<td>Permite evaluar sesgo, dispersion y extremos.</td>
+</tr>
+<tr>
+<td>NA_Sales vs EU_Sales</td>
+<td>Cuantitativa continua vs continua</td>
+<td>Dispersion</td>
+<td>Permite evaluar relacion entre ventas de dos regiones.</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Reflexion final</h2>
+<ol>
+<li>
+<p><strong>Que variables fueron mas dificiles de clasificar y por que?</strong><br />
+<code>Rank</code> fue la mas discutible porque usa numeros, pero describe posicion relativa; por eso se clasifica mejor como ordinal.</p>
+</li>
+<li>
+<p><strong>Que riesgos puede generar escoger una grafica incorrecta?</strong><br />
+Se pueden ocultar patrones o inducir conclusiones erradas. Un ejemplo comun es usar grafica de pastel con demasiadas categorias, lo que dificulta comparar proporciones.</p>
+</li>
+<li>
+<p><strong>Como impacta la clasificacion de variables en la analitica de datos?</strong><br />
+Impacta directamente la validez del analisis: una clasificacion correcta permite elegir tecnicas y visualizaciones coherentes, mejora la interpretacion y reduce errores de decision.</p>
+</li>
+</ol>
+<h2>Referencias</h2>
+<ul>
+<li>pandas development team. (n.d.). <em>pandas documentation</em>. https://pandas.pydata.org/docs/</li>
+<li>Matplotlib Development Team. (n.d.). <em>Matplotlib documentation</em>. https://matplotlib.org/</li>
+<li>McKinney, W. (2022). <em>Python for Data Analysis</em> (3rd ed.). O'Reilly Media.</li>
+</ul>
+</body>
+</html>
